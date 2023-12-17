@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify</title>
+  <style>
+    /* Vos styles CSS ici... */
+  </style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h1><span class="header-text">Sportify:</span> Consultation sportive</h1>
+			<img src="sportify.jpg" alt="Consultation sportive Image">
+		</div>
+		<div class="navigation">
+			<a href="accueil.html" class="rectangle">Accueil</a>
+			<a href="Tout_parcourir" class="rectangle">Tout parcourir</a>
+			<a href="Rendez_vous.php" class="rectangle">Rendez-vous</a>
+			<a href="recherche.html" class="rectangle">Recherche</a>
+			<a href="Votre_compte" class="rectangle">Votre compte</a>
+		</div>
+		<div class="section">
+			<h2>Bienvenue dans Sportify:</h2>
+			<p>Vous pourrez trouver ici de nombreux événements sportifs avec nos équipes ainsi que des coachs avec lesquels vous pourrez prendre rendez-vous.</p>
+			<h3>Événement de la semaine:</h3>
+
+			<?php
+				// Identifier le nom de la base de données
+				$database = "projet";
+
+				// Se connecter à la base de données
+				$db_handle = mysqli_connect('localhost', 'root', '');
+				$db_found = mysqli_select_db($db_handle, $database);
+
+				// Si la base de données est trouvée, faire le traitement
+				if ($db_found) {
+					SELECT
+				} else {
+					echo "Erreur: Base de données non trouvée.";
+				}
+
+				// Fermer la connexion à la base de données
+				mysqli_close($db_handle);
+			?>
+		</div>
+	</div>
+</body>
+</html>
